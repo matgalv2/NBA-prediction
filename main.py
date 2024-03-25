@@ -1,22 +1,25 @@
-# This is a sample Python script.
+import warnings
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import pandas as pandas
-from nba_api.stats.endpoints.teamgamelog import TeamGameLog
+from pandas import read_csv
 
-
+from download_data import getAllTeamsGameLog
+from utils import generateSeasons
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    print(TeamGameLog(team_id="1610612737").team_game_log.get_data_frame().columns)
+    warnings.filterwarnings("ignore")
+    teams = read_csv("resources/teams_details.tsv", sep="\t")
+    team_ids = teams["id"]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+    for season in generateSeasons(2018, 2023):
+        logs = getAllTeamsGameLog(team_ids, season)
+        logs.to_csv(f"resources/game-logs/season_{season}.tsv", sep="\t", index=False)
+
+
+# TODO:
+#   1. ELO rating
+#   2. Check relevance for all parameters (ANOVA or logistic regression)
+#   3. Feature selection
+#   4. Comments
 

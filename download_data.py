@@ -1,7 +1,7 @@
 import time
-from typing import List
 
-from pandas import concat, read_csv
+from typing import List
+from pandas import concat
 
 from const import game_log_columns, advanced_game_details_columns
 from get_data import *
@@ -55,14 +55,4 @@ def getAllTeamsGameLog(team_ids: List[str], season: str) -> DataFrame:
 
     games = enrichGameLogsWithAdvancedDetails(games)
     return games
-
-
-if __name__ == '__main__':
-    teams = read_csv("resources/teams_details.tsv", sep="\t")
-    team_ids = teams["id"]
-
-
-    for season in generateSeasons(2018, 2023):
-        logs = getAllTeamsGameLog(team_ids, season)
-        logs.to_csv(f"resources/game-logs/season_{season}.tsv", sep="\t", index=False)
 
