@@ -1,9 +1,8 @@
 import time
 
-from typing import List
 from pandas import concat
 
-from const import game_log_columns, advanced_game_details_columns
+from const import full_box_score_attributes, game_log_attributes
 from get_data import *
 
 
@@ -29,30 +28,29 @@ def tryUntilSuccess(func, *args):
     return result
 
 
-def enrichGameLogsWithAdvancedDetails(game_logs: DataFrame) -> DataFrame:
-    game_ids = set(game_logs["Game_ID"])
-    advanced_game_details = DataFrame(columns=advanced_game_details_columns)
-    for i, game_id in enumerate(game_ids):
-        time.sleep(1)
+def getStatistics(all_game_ids: List[str]) -> DataFrame:
+    game_ids = set(all_game_ids)
+    attributes = full_box_score_attributes
+    game_logs = DataFrame(columns=attributes)
 
+    for i, game_id in enumerate(game_ids):
+        box_score_traditional = tryUntilSuccess(getBoxScoreTraditional, game_id)
         box_score_advanced = tryUntilSuccess(getBoxScoreAdvanced, game_id)
-        advanced_game_details = concat([box_score_advanced, advanced_game_details], ignore_index=True)
+        full_game_log = box_score_traditional.merge(box_score_advanced, how='left', on=['GAME_ID', 'TEAM_ID'])
+        game_logs = concat([full_game_log, game_logs], ignore_index=True)
         print(f"{round((i + 1) * 100 / len(game_ids), 3)}%")
-    game_logs = game_logs.merge(advanced_game_details, how='left', on=['Game_ID', 'Team_ID'])
 
     return game_logs
 
 
-def getAllTeamsGameLog(team_ids: List[str], season: str) -> DataFrame:
-    games = DataFrame(columns=game_log_columns)
+def getGameLogs(team_ids: List[str], season: str) -> DataFrame:
+    games = DataFrame(columns=game_log_attributes)
     teams_no = len(team_ids)
 
     for i, team_id in enumerate(team_ids):
-        gameLogs = tryUntilSuccess(getTeamGameLogs, team_id, season)
-        games = concat([games, gameLogs], ignore_index=True)
-
+        game_logs = tryUntilSuccess(getTeamGameLogs, team_id, season)
+        games = concat([games, game_logs])
         print(f"{round((i + 1) * 100/teams_no, 3)}% ---- season {season}")
 
-    games = enrichGameLogsWithAdvancedDetails(games)
     return games
 

@@ -1,7 +1,10 @@
-from nba_api.stats.endpoints import teamgamelog, boxscoreadvancedv2
+from typing import List, Type
+
+from nba_api.stats.endpoints import teamgamelog, BoxScoreAdvancedV2,BoxScoreTraditionalV2
 from nba_api.stats.static.teams import get_teams
 from pandas import DataFrame
 
+from const import traditional_box_score_attributes, advanced_box_score_attributes
 
 def getTeamsDetails() -> DataFrame:
     teams_details = get_teams()
@@ -9,33 +12,43 @@ def getTeamsDetails() -> DataFrame:
     return teams_details_dataframe
 
 
-def getTeamGameLogs(team_id, season) -> DataFrame:
+def getTeamGameLogs(team_id, season) -> List[str]:
     team_game_log = teamgamelog.TeamGameLog(team_id=f"{team_id}", season=season)
-    team_game_log_dataframe = team_game_log.get_data_frames()[0]
-    return team_game_log_dataframe
+    game_logs = team_game_log.get_data_frames()[0]
+    return game_logs
+
+def getTeamGameIds(game_logs: DataFrame) -> List[str]:
+    return game_logs["Game_ID"].tolist()
 
 
-def getBoxScoreAdvanced(game_id) -> DataFrame:
-    box_score = boxscoreadvancedv2.BoxScoreAdvancedV2(game_id=game_id)
+def __getBoxScore(game_id: str,
+                  BoxScoreEndpoint: Type[BoxScoreAdvancedV2] | Type[BoxScoreTraditionalV2],
+                  box_score_attributes: List[str]
+                  ) -> DataFrame:
+
+    def mapMinutes(minutes: str):
+        return minutes.split(".")[0]
+
+    box_score = BoxScoreEndpoint(game_id=game_id)
     box_score_teams = box_score.get_normalized_dict()["TeamStats"]
 
-    advanced_details = {
-        'Game_ID': [box_score_teams[0]["GAME_ID"], box_score_teams[1]["GAME_ID"]],
-        'Team_ID': [box_score_teams[0]["TEAM_ID"], box_score_teams[1]["TEAM_ID"]],
-        'OFF_RATING': [box_score_teams[0]["OFF_RATING"], box_score_teams[1]["OFF_RATING"]],
-        'DEF_RATING': [box_score_teams[0]["DEF_RATING"], box_score_teams[1]["DEF_RATING"]],
-        'NET_RATING': [box_score_teams[0]["NET_RATING"], box_score_teams[1]["NET_RATING"]],
-        'AST_PCT': [box_score_teams[0]["AST_PCT"], box_score_teams[1]["AST_PCT"]],
-        'AST_TOV': [box_score_teams[0]["AST_TOV"], box_score_teams[1]["AST_TOV"]],
-        'AST_RATIO': [box_score_teams[0]["AST_RATIO"], box_score_teams[1]["AST_RATIO"]],
-        'OREB_PCT': [box_score_teams[0]["OREB_PCT"], box_score_teams[1]["OREB_PCT"]],
-        'DREB_PCT': [box_score_teams[0]["DREB_PCT"], box_score_teams[1]["DREB_PCT"]],
-        'REB_PCT': [box_score_teams[0]["REB_PCT"], box_score_teams[1]["REB_PCT"]],
-        'TM_TOV_PCT': [box_score_teams[0]["TM_TOV_PCT"], box_score_teams[1]["TM_TOV_PCT"]],
-        'EFG_PCT': [box_score_teams[0]["EFG_PCT"], box_score_teams[1]["EFG_PCT"]],
-        'TS_PCT': [box_score_teams[0]["TS_PCT"], box_score_teams[1]["TS_PCT"]],
-        'PACE': [box_score_teams[0]["PACE"], box_score_teams[1]["PACE"]],
-        'PIE': [box_score_teams[0]["PIE"], box_score_teams[1]["PIE"]],
+    details = {
+        attribute : [
+            box_score_teams[0][attribute],
+            box_score_teams[1][attribute]
+        ] if attribute != "MIN" else [
+            mapMinutes(box_score_teams[0][attribute]),
+            mapMinutes(box_score_teams[1][attribute])
+        ] for attribute in box_score_attributes
     }
+    return DataFrame(data=details)
 
-    return DataFrame(data=advanced_details)
+
+def getBoxScoreAdvanced(game_id: str) -> DataFrame:
+    endpoint = BoxScoreAdvancedV2
+    return __getBoxScore(game_id, endpoint, advanced_box_score_attributes)
+
+
+def getBoxScoreTraditional(game_id: str) -> DataFrame:
+    endpoint = BoxScoreTraditionalV2
+    return __getBoxScore(game_id, endpoint, traditional_box_score_attributes)
