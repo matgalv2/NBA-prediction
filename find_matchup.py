@@ -18,7 +18,7 @@ def findGameIdByTeamNamesAndPoints(team1, team2, dataset: DataFrame) -> DataFram
 if __name__ == "__main__":
     df = pandas.read_csv("resources/game-logs/season_2023-24.tsv", sep="\t")
     entry = ""
-    while entry != "0":
+    while entry != "q":
         try:
             entry = input("\nEnter teams abbreviations':\n")
             print(findGameIdByTeamNamesAndPoints(*entry.upper().split(" "), df))
