@@ -23,16 +23,12 @@ def homeAdvantageChart():
 
     # Number of groups
     num_groups = len(percentage)
-
     # Group labels
     group_labels = list(percentage.keys())
-
     # Width of bars
     bar_width = 0.35
-
     # Index for the x-axis
     index = np.arange(num_groups)
-
     # Create subplots
     fig, ax = plt.subplots()
 
@@ -57,6 +53,5 @@ def homeAdvantageChart():
     ax.set_xticklabels(group_labels)
     ax.legend(loc='upper right')
 
-    # Show plot
     # plt.show()
     plt.savefig("resources/charts/home-advantage.png", dpi=300)
