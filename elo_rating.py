@@ -7,8 +7,6 @@ from domain import date
 from domain.matchup import getHomeTeamIDByMatchUp
 from utils import generateSeasons
 
-basic_elo_rating = 1500
-
 
 def estimatedScore(elo_rating_player, elo_rating_opponent) -> float:
     return 1 / (1 + 10 ** ((elo_rating_opponent - elo_rating_player) / 400))
@@ -25,7 +23,7 @@ def updatedEloRating(old_elo, actual_score, estimated_score, k_factor):
     return old_elo + k_factor * (actual_score - estimated_score)
 
 
-def kFactor(margin_of_victory, elo_difference):
+def kFactor(margin_of_victory, elo_difference, **kwargs):
     """
     :param margin_of_victory: the difference between points scored by winner and points scored by loser
     :param elo_difference: the difference between winner's elo rating and loser's elo rating
@@ -36,7 +34,18 @@ def kFactor(margin_of_victory, elo_difference):
     return 20 * numerator / denominator
 
 
-def enrichSeasonGameLogsWithElo(matchups: DataFrame, team_details: DataFrame, ratings: Dict[str, int]):
+def simple_kFactor(margin_of_victory, elo_difference, k0=20, lambda_exp=0.5, **kwargs):
+    """
+    :param margin_of_victory: the difference between points scored by winner and points scored by loser
+    :param elo_difference: the difference between winner's elo rating and loser's elo rating
+    :param k0:
+    :param lambda_exp:
+    :return: K-factor with base value equals 20
+    """
+    return k0 * ((1 + margin_of_victory) ** lambda_exp)
+
+
+def enrichSeasonGameLogsWithElo(matchups: DataFrame, team_details: DataFrame, ratings: Dict[str, int], kFactor_func, **kwargs):
     for i in range(len(matchups.values)):
 
         row = matchups.iloc[i].to_dict()
@@ -59,9 +68,9 @@ def enrichSeasonGameLogsWithElo(matchups: DataFrame, team_details: DataFrame, ra
         home_team_id = getHomeTeamIDByMatchUp(row["MATCHUP"], team_details)
 
         if home_team_id == teamID_x:
-            team_x_elo += 100
+            team_x_elo += 100 * kwargs["basic_elo"]/1500
         else:
-            team_y_elo += 100
+            team_y_elo += 100 * kwargs["basic_elo"]/1500
 
         if row["WL_x"] == "W":
             elo_diff = team_x_elo - team_y_elo
@@ -69,7 +78,7 @@ def enrichSeasonGameLogsWithElo(matchups: DataFrame, team_details: DataFrame, ra
             elo_diff = team_y_elo - team_x_elo
 
         mov = abs(row["PTS_x"] - row["PTS_y"])
-        k_factor = kFactor(mov, elo_diff)
+        k_factor = kFactor_func(mov, elo_diff, **kwargs)
 
         estimated_score_x = estimatedScore(team_x_elo, team_y_elo)
         estimated_score_y = estimatedScore(team_y_elo, team_x_elo)
@@ -84,7 +93,7 @@ def eloYearToYearCarryOver(old_elo: int) -> int:
     return int((.75 * old_elo) + (.25 * 1505))
 
 
-def enrichLogsWithElo(teamIDs: List[str], team_details: DataFrame, game_logs_per_season: Dict[str,DataFrame]):
+def enrichLogsWithElo(teamIDs: List[str], team_details: DataFrame, game_logs_per_season: Dict[str,DataFrame], basic_elo_rating, kFactor_func, **kwargs):
     elo_ratings = {teamID: basic_elo_rating for teamID in teamIDs}
 
     all_season_matchups_with_elo: Dict[str,DataFrame] = {}
@@ -103,7 +112,9 @@ def enrichLogsWithElo(teamIDs: List[str], team_details: DataFrame, game_logs_per
         matchups["ELO_x"] = np.nan
         matchups["ELO_y"] = np.nan
 
-        matchups_elo = enrichSeasonGameLogsWithElo(matchups, team_details, elo_ratings)
+        kwargs.update(basic_elo=basic_elo_rating)
+
+        matchups_elo = enrichSeasonGameLogsWithElo(matchups, team_details, elo_ratings, kFactor_func, **kwargs)
         all_season_matchups_with_elo[season] = matchups_elo
         # update elo ratings for new season
         elo_ratings = {teamID: eloYearToYearCarryOver(elo_ratings[teamID]) for teamID, rating in elo_ratings.items()}
@@ -119,7 +130,7 @@ if __name__ == '__main__':
     for season in generateSeasons(2018, 2023):
         game_logs_per_season[season] = read_csv(f"resources/game-logs/season_{season}.tsv", sep='\t')
 
-    matchups_with_elo = enrichLogsWithElo(teamIDs, team_details, game_logs_per_season)
+    matchups_with_elo = enrichLogsWithElo(teamIDs, team_details, game_logs_per_season, basic_elo_rating=1500, kFactor_func=kFactor)
 
     for season, matchups_elo in matchups_with_elo.items():
         matchups_elo.to_csv(f"resources/elo-ratings/season_{season}.tsv", sep="\t", index=False)
