@@ -130,7 +130,7 @@ if __name__ == '__main__':
     for season in generateSeasons(2018, 2023):
         game_logs_per_season[season] = read_csv(f"resources/game-logs/season_{season}.tsv", sep='\t')
 
-    matchups_with_elo = enrichLogsWithElo(teamIDs, team_details, game_logs_per_season, basic_elo_rating=1500, kFactor_func=kFactor)
+    matchups_with_elo = enrichLogsWithElo(teamIDs, team_details, game_logs_per_season, basic_elo_rating=1300, kFactor_func=simple_kFactor, k0=6, lambda_exp=0.6)
 
     for season, matchups_elo in matchups_with_elo.items():
         matchups_elo.to_csv(f"resources/elo-ratings/season_{season}.tsv", sep="\t", index=False)
