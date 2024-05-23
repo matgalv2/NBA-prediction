@@ -8,13 +8,11 @@ from elo_rating import enrichLogsWithElo, simple_kFactor
 from utils import generateSeasons
 
 
-def generateEloParameters(k0_range=(2,22,2), lambda_range=(2,22,2), basic_elo_rating_range=(500,1800,100)):
+def generateEloParameters(k0_range=(2,20,2), lambda_range=(0.2,2.0,0.2), basic_elo_rating_range=(500,1800,100)):
     for basic_elo_rating in range(*basic_elo_rating_range):
         for k0 in range(*k0_range):
-            for lambda_exp in range(*lambda_range):
-                yield basic_elo_rating,k0,float(lambda_exp)/10
-
-generateEloParameters()
+            for lambda_exp in np.arange(*lambda_range):
+                yield basic_elo_rating,k0,lambda_exp
 
 
 def hypertune_logistic_regression(x, y):
