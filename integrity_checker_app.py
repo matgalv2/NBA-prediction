@@ -8,7 +8,7 @@ def checkIntegrity(gameID: str, per_game_statistics: DataFrame):
 
     post = pandas.read_csv(f'resources/comments/{gameID}.tsv', sep='\t')
     labels = post["TEAM_ABBREVIATION"].tolist()
-    teams = per_game_statistics[per_game_statistics["GAME_ID"] == gameID]["TEAM_ABBREVIATION"].tolist()
+    teams = per_game_statistics[per_game_statistics["GAME_ID"] == gameID]["TEAM_ABBREVIATION"].tolist() + ["SPAM"]
     offset = 2
     for i, label in enumerate(labels):
         if not label in teams and (type(label) == str or not math.isnan(label)):
