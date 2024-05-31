@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from pandas import read_csv, DataFrame
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import RepeatedStratifiedKFold, GridSearchCV, KFold, cross_val_score
+from sklearn.model_selection import GridSearchCV, KFold, cross_val_score
 
 from elo_rating import enrichLogsWithElo, simple_kFactor
 from utils import generateSeasons
