@@ -2,7 +2,7 @@ from typing import List
 
 import pandas as pd
 from pandas import DataFrame
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 from domain import date
 
@@ -118,7 +118,7 @@ def normalizeHomeAndAwayTeamsTogether(raw_dataset: DataFrame):
 
     all_stats = pd.concat([home_df, away_df], ignore_index=True)
 
-    scaler = MinMaxScaler(feature_range=(0, 1))
+    scaler = StandardScaler()
     all_stats[attributes_to_be_normalized] = scaler.fit_transform(all_stats[attributes_to_be_normalized])
 
     home_normalized = all_stats[all_stats["IS_HOME"] == 1].drop(columns=["IS_HOME"])
