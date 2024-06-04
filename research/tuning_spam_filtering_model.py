@@ -5,6 +5,7 @@ import os
 
 from sklearn import svm
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import KFold, GridSearchCV
 
 import nltk
@@ -15,13 +16,12 @@ def hypertune_svm(x, y, file: TextIO, technique:str):
     model = svm.SVC()
     kernel = ['linear', 'poly', 'rbf', 'sigmoid']
     C = [1000, 100, 50, 10, 1.0, 0.1, 0.01]
-    gamma = ['scale']
     degree = range(1,11)
 
-    grid = dict(kernel=kernel,C=C,gamma=gamma, degree=degree)
+    grid = dict(kernel=kernel,C=C, degree=degree)
 
     cv = KFold(n_splits=10)
-    grid_search = GridSearchCV(estimator=model, param_grid=grid, n_jobs=-1, cv=cv, scoring='precision', error_score=0)
+    grid_search = GridSearchCV(estimator=model, param_grid=grid, n_jobs=-1, cv=cv, scoring='precision', error_score=0, verbose=2)
     grid_result = grid_search.fit(x, y)
 
     means = grid_result.cv_results_['mean_test_score']
