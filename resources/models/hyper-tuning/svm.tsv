@@ -1,533 +1,309 @@
-C	kernel	degree	accuracy
-1000	linear	-	0.97252
-1000	poly	1	0.97252
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	2	0.98166
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	3	0.98626
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	4	0.98399
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	5	0.97933
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	6	0.97474
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	7	0.97241
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	8	0.97014
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	9	0.96781
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	10	0.95862
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	11	0.96321
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	12	0.96094
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	13	0.94952
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	14	0.9473
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	15	0.94736
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	16	0.94508
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	17	0.94276
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	18	0.94276
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-1000	linear	-	0.97252
-1000	poly	19	0.93811
-1000	rbf	-	0.96776
-1000	sigmoid	-	0.62394
-100	linear	-	0.97711
-100	poly	1	0.97252
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	2	0.98166
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	3	0.98626
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	4	0.98399
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	5	0.97933
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	6	0.97474
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	7	0.97241
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	8	0.97014
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	9	0.96781
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	10	0.95862
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	11	0.96321
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	12	0.96094
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	13	0.94952
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	14	0.9473
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	15	0.94736
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	16	0.94508
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	17	0.94276
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	18	0.94276
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-100	linear	-	0.97711
-100	poly	19	0.93811
-100	rbf	-	0.96776
-100	sigmoid	-	0.69582
-50	linear	-	0.98166
-50	poly	1	0.98166
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	2	0.98166
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	3	0.98626
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	4	0.98399
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	5	0.97933
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	6	0.97474
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	7	0.97241
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	8	0.97014
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	9	0.96781
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	10	0.95862
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	11	0.96321
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	12	0.96094
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	13	0.94952
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	14	0.9473
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	15	0.94736
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	16	0.94508
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	17	0.94276
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	18	0.94276
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-50	linear	-	0.98166
-50	poly	19	0.93811
-50	rbf	-	0.96776
-50	sigmoid	-	0.54625
-10	linear	-	0.97474
-10	poly	1	0.97019
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	2	0.98166
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	3	0.98626
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	4	0.98399
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	5	0.97933
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	6	0.97474
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	7	0.97241
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	8	0.97014
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	9	0.96781
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	10	0.95862
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	11	0.96321
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	12	0.96094
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	13	0.94952
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	14	0.9473
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	15	0.94736
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	16	0.94508
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	17	0.94276
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	18	0.94276
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-10	linear	-	0.97474
-10	poly	19	0.93811
-10	rbf	-	0.96776
-10	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	1	0.96786
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	2	0.97711
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	3	0.98626
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	4	0.98399
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	5	0.97933
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	6	0.97474
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	7	0.97241
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	8	0.97014
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	9	0.96781
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	10	0.95862
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	11	0.96321
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	12	0.96094
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	13	0.94952
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	14	0.9473
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	15	0.94736
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	16	0.94508
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	17	0.94276
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	18	0.94276
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-1.0	linear	-	0.97014
-1.0	poly	19	0.93811
-1.0	rbf	-	0.96321
-1.0	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	1	0.94725
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	2	0.97241
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	3	0.98393
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	4	0.98399
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	5	0.97933
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	6	0.97474
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	7	0.97241
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	8	0.97014
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	9	0.96781
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	10	0.95862
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	11	0.96321
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	12	0.96094
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	13	0.94952
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	14	0.9473
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	15	0.94736
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	16	0.94508
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	17	0.94276
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	18	0.94276
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.1	linear	-	0.94952
-0.1	poly	19	0.93811
-0.1	rbf	-	0.95174
-0.1	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	1	0.86734
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	2	0.94947
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	3	0.97008
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	4	0.98388
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	5	0.97933
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	6	0.97474
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	7	0.97241
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	8	0.97014
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	9	0.96781
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	10	0.95862
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	11	0.96321
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	12	0.96094
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	13	0.94952
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	14	0.9473
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	15	0.94736
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	16	0.94508
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	17	0.94276
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	18	0.94276
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
-0.01	linear	-	0.913
-0.01	poly	19	0.93811
-0.01	rbf	-	0.51173
-0.01	sigmoid	-	0.51173
+C	kernel	degree	probability	accuracy
+1000	linear	-	True	0.93816
+1000	linear	-	False	0.93816
+1000	rbf	-	True	0.87854
+1000	rbf	-	False	0.87854
+1000	sigmoid	-	True	0.8787
+1000	sigmoid	-	False	0.8787
+100	linear	-	True	0.93356
+100	linear	-	False	0.93356
+100	rbf	-	True	0.87854
+100	rbf	-	False	0.87854
+100	sigmoid	-	True	0.87854
+100	sigmoid	-	False	0.87854
+50	linear	-	True	0.93356
+50	linear	-	False	0.93356
+50	rbf	-	True	0.87854
+50	rbf	-	False	0.87854
+50	sigmoid	-	True	0.8834
+50	sigmoid	-	False	0.8834
+10	linear	-	True	0.93589
+10	linear	-	False	0.93589
+10	rbf	-	True	0.87172
+10	rbf	-	False	0.87172
+10	sigmoid	-	True	0.89249
+10	sigmoid	-	False	0.89249
+1.0	linear	-	True	0.93599
+1.0	linear	-	False	0.93599
+1.0	rbf	-	True	0.9223
+1.0	rbf	-	False	0.9223
+1.0	sigmoid	-	True	0.92008
+1.0	sigmoid	-	False	0.92008
+0.1	linear	-	True	0.94054
+0.1	linear	-	False	0.94054
+0.1	rbf	-	True	0.90618
+0.1	rbf	-	False	0.90618
+0.1	sigmoid	-	True	0.91998
+0.1	sigmoid	-	False	0.91998
+0.01	linear	-	True	0.92458
+0.01	linear	-	False	0.92458
+0.01	rbf	-	True	0.47267
+0.01	rbf	-	False	0.47267
+0.01	sigmoid	-	True	0.86971
+0.01	sigmoid	-	False	0.86971
+1000	poly	1	True	0.93362
+1000	poly	1	False	0.93362
+1000	poly	2	True	0.5343
+1000	poly	2	False	0.5343
+1000	poly	3	True	0.8834
+1000	poly	3	False	0.8834
+1000	poly	4	True	0.54112
+1000	poly	4	False	0.54112
+1000	poly	5	True	0.80529
+1000	poly	5	False	0.80529
+1000	poly	6	True	0.48393
+1000	poly	6	False	0.48393
+1000	poly	7	True	0.78013
+1000	poly	7	False	0.78013
+1000	poly	8	True	0.50973
+1000	poly	8	False	0.50973
+1000	poly	9	True	0.75016
+1000	poly	9	False	0.75016
+1000	poly	10	True	0.55534
+1000	poly	10	False	0.55534
+1000	poly	11	True	0.6815
+1000	poly	11	False	0.6815
+1000	poly	12	True	0.54836
+1000	poly	12	False	0.54836
+1000	poly	13	True	0.63097
+1000	poly	13	False	0.63097
+1000	poly	14	True	0.53684
+1000	poly	14	False	0.53684
+1000	poly	15	True	0.58737
+1000	poly	15	False	0.58737
+1000	poly	16	True	0.52754
+1000	poly	16	False	0.52754
+1000	poly	17	True	0.57357
+1000	poly	17	False	0.57357
+1000	poly	18	True	0.52981
+1000	poly	18	False	0.52981
+1000	poly	19	True	0.56205
+1000	poly	19	False	0.56205
+100	poly	1	True	0.94503
+100	poly	1	False	0.94503
+100	poly	2	True	0.53192
+100	poly	2	False	0.53192
+100	poly	3	True	0.88108
+100	poly	3	False	0.88108
+100	poly	4	True	0.54804
+100	poly	4	False	0.54804
+100	poly	5	True	0.86284
+100	poly	5	False	0.86284
+100	poly	6	True	0.57119
+100	poly	6	False	0.57119
+100	poly	7	True	0.76173
+100	poly	7	False	0.76173
+100	poly	8	True	0.56675
+100	poly	8	False	0.56675
+100	poly	9	True	0.67463
+100	poly	9	False	0.67463
+100	poly	10	True	0.55513
+100	poly	10	False	0.55513
+100	poly	11	True	0.61956
+100	poly	11	False	0.61956
+100	poly	12	True	0.5528
+100	poly	12	False	0.5528
+100	poly	13	True	0.59424
+100	poly	13	False	0.59424
+100	poly	14	True	0.53901
+100	poly	14	False	0.53901
+100	poly	15	True	0.57125
+100	poly	15	False	0.57125
+100	poly	16	True	0.52981
+100	poly	16	False	0.52981
+100	poly	17	True	0.55745
+100	poly	17	False	0.55745
+100	poly	18	True	0.51834
+100	poly	18	False	0.51834
+100	poly	19	True	0.55285
+100	poly	19	False	0.55285
+50	poly	1	True	0.93594
+50	poly	1	False	0.93594
+50	poly	2	True	0.54112
+50	poly	2	False	0.54112
+50	poly	3	True	0.88108
+50	poly	3	False	0.88108
+50	poly	4	True	0.55529
+50	poly	4	False	0.55529
+50	poly	5	True	0.85581
+50	poly	5	False	0.85581
+50	poly	6	True	0.56216
+50	poly	6	False	0.56216
+50	poly	7	True	0.74107
+50	poly	7	False	0.74107
+50	poly	8	True	0.56448
+50	poly	8	False	0.56448
+50	poly	9	True	0.66311
+50	poly	9	False	0.66311
+50	poly	10	True	0.55978
+50	poly	10	False	0.55978
+50	poly	11	True	0.60809
+50	poly	11	False	0.60809
+50	poly	12	True	0.5436
+50	poly	12	False	0.5436
+50	poly	13	True	0.59424
+50	poly	13	False	0.59424
+50	poly	14	True	0.53441
+50	poly	14	False	0.53441
+50	poly	15	True	0.57119
+50	poly	15	False	0.57119
+50	poly	16	True	0.51829
+50	poly	16	False	0.51829
+50	poly	17	True	0.5574
+50	poly	17	False	0.5574
+50	poly	18	True	0.51834
+50	poly	18	False	0.51834
+50	poly	19	True	0.55058
+50	poly	19	False	0.55058
+10	poly	1	True	0.94059
+10	poly	1	False	0.94059
+10	poly	2	True	0.52997
+10	poly	2	False	0.52997
+10	poly	3	True	0.91084
+10	poly	3	False	0.91084
+10	poly	4	True	0.58747
+10	poly	4	False	0.58747
+10	poly	5	True	0.81675
+10	poly	5	False	0.81675
+10	poly	6	True	0.56892
+10	poly	6	False	0.56892
+10	poly	7	True	0.70439
+10	poly	7	False	0.70439
+10	poly	8	True	0.55063
+10	poly	8	False	0.55063
+10	poly	9	True	0.638
+10	poly	9	False	0.638
+10	poly	10	True	0.54355
+10	poly	10	False	0.54355
+10	poly	11	True	0.59646
+10	poly	11	False	0.59646
+10	poly	12	True	0.53441
+10	poly	12	False	0.53441
+10	poly	13	True	0.57579
+10	poly	13	False	0.57579
+10	poly	14	True	0.52981
+10	poly	14	False	0.52981
+10	poly	15	True	0.55745
+10	poly	15	False	0.55745
+10	poly	16	True	0.52537
+10	poly	16	False	0.52537
+10	poly	17	True	0.54598
+10	poly	17	False	0.54598
+10	poly	18	True	0.5231
+10	poly	18	False	0.5231
+10	poly	19	True	0.54371
+10	poly	19	False	0.54371
+1.0	poly	1	True	0.93372
+1.0	poly	1	False	0.93372
+1.0	poly	2	True	0.52981
+1.0	poly	2	False	0.52981
+1.0	poly	3	True	0.91099
+1.0	poly	3	False	0.91099
+1.0	poly	4	True	0.56887
+1.0	poly	4	False	0.56887
+1.0	poly	5	True	0.77093
+1.0	poly	5	False	0.77093
+1.0	poly	6	True	0.54841
+1.0	poly	6	False	0.54841
+1.0	poly	7	True	0.66543
+1.0	poly	7	False	0.66543
+1.0	poly	8	True	0.52764
+1.0	poly	8	False	0.52764
+1.0	poly	9	True	0.59878
+1.0	poly	9	False	0.59878
+1.0	poly	10	True	0.53451
+1.0	poly	10	False	0.53451
+1.0	poly	11	True	0.56892
+1.0	poly	11	False	0.56892
+1.0	poly	12	True	0.5231
+1.0	poly	12	False	0.5231
+1.0	poly	13	True	0.55053
+1.0	poly	13	False	0.55053
+1.0	poly	14	True	0.52082
+1.0	poly	14	False	0.52082
+1.0	poly	15	True	0.54144
+1.0	poly	15	False	0.54144
+1.0	poly	16	True	0.51855
+1.0	poly	16	False	0.51855
+1.0	poly	17	True	0.54144
+1.0	poly	17	False	0.54144
+1.0	poly	18	True	0.51163
+1.0	poly	18	False	0.51163
+1.0	poly	19	True	0.52992
+1.0	poly	19	False	0.52992
+0.1	poly	1	True	0.9223
+0.1	poly	1	False	0.9223
+0.1	poly	2	True	0.44292
+0.1	poly	2	False	0.44292
+0.1	poly	3	True	0.826
+0.1	poly	3	False	0.826
+0.1	poly	4	True	0.47008
+0.1	poly	4	False	0.47008
+0.1	poly	5	True	0.7
+0.1	poly	5	False	0.7
+0.1	poly	6	True	0.52553
+0.1	poly	6	False	0.52553
+0.1	poly	7	True	0.61739
+0.1	poly	7	False	0.61739
+0.1	poly	8	True	0.5139
+0.1	poly	8	False	0.5139
+0.1	poly	9	True	0.562
+0.1	poly	9	False	0.562
+0.1	poly	10	True	0.50941
+0.1	poly	10	False	0.50941
+0.1	poly	11	True	0.53684
+0.1	poly	11	False	0.53684
+0.1	poly	12	True	0.51163
+0.1	poly	12	False	0.51163
+0.1	poly	13	True	0.53219
+0.1	poly	13	False	0.53219
+0.1	poly	14	True	0.50936
+0.1	poly	14	False	0.50936
+0.1	poly	15	True	0.52304
+0.1	poly	15	False	0.52304
+0.1	poly	16	True	0.5093
+0.1	poly	16	False	0.5093
+0.1	poly	17	True	0.52304
+0.1	poly	17	False	0.52304
+0.1	poly	18	True	0.5093
+0.1	poly	18	False	0.5093
+0.1	poly	19	True	0.52077
+0.1	poly	19	False	0.52077
+0.01	poly	1	True	0.88118
+0.01	poly	1	False	0.88118
+0.01	poly	2	True	0.47267
+0.01	poly	2	False	0.47267
+0.01	poly	3	True	0.50936
+0.01	poly	3	False	0.50936
+0.01	poly	4	True	0.47267
+0.01	poly	4	False	0.47267
+0.01	poly	5	True	0.46332
+0.01	poly	5	False	0.46332
+0.01	poly	6	True	0.438
+0.01	poly	6	False	0.438
+0.01	poly	7	True	0.46543
+0.01	poly	7	False	0.46543
+0.01	poly	8	True	0.438
+0.01	poly	8	False	0.438
+0.01	poly	9	True	0.46998
+0.01	poly	9	False	0.46998
+0.01	poly	10	True	0.45846
+0.01	poly	10	False	0.45846
+0.01	poly	11	True	0.51586
+0.01	poly	11	False	0.51586
+0.01	poly	12	True	0.47918
+0.01	poly	12	False	0.47918
+0.01	poly	13	True	0.52077
+0.01	poly	13	False	0.52077
+0.01	poly	14	True	0.50011
+0.01	poly	14	False	0.50011
+0.01	poly	15	True	0.51845
+0.01	poly	15	False	0.51845
+0.01	poly	16	True	0.5047
+0.01	poly	16	False	0.5047
+0.01	poly	17	True	0.51845
+0.01	poly	17	False	0.51845
+0.01	poly	18	True	0.50703
+0.01	poly	18	False	0.50703
+0.01	poly	19	True	0.52077
+0.01	poly	19	False	0.52077
