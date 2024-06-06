@@ -1,0 +1,27 @@
+technique	kernel	C	gamma	degree	precision
+lemmatization	poly	0.01	scale	1	0.96623
+lemmatization	poly	0.01	scale	1	0.96623
+stemming	poly	0.01	scale	1	0.96395
+stemming	poly	0.01	scale	1	0.96395
+technique	kernel	C	gamma	degree	precision
+lemmatization	linear	0.01	-	0.93125
+lemmatization	rbf	0.01	-	0.0
+lemmatization	sigmoid	0.01	-	0.96032
+lemmatization	poly	0.01	1	0.96623
+stemming	linear	0.01	-	0.93132
+stemming	rbf	0.01	-	0.0
+stemming	sigmoid	0.01	-	0.96069
+stemming	poly	0.01	1	0.96395
+technique	C	regularization	solver	accuracy
+technique	C	regularization	solver	accuracy
+lemmatization	0.01	l1	saga	0.93389
+lemmatization	0.01	l1	liblinear	0.93389
+technique	C	regularization	solver	accuracy
+lemmatization	0.01	l1	saga	0.9555
+lemmatization	0.01	l1	liblinear	0.9555
+lemmatization	0.01	l2	lbfgs	0.96607
+lemmatization	0.01	l2	liblinear	0.95761
+lemmatization	0.01	l2	newton-cg	0.96609
+lemmatization	0.01	l2	newton-cholesky	0.96609
+lemmatization	0.01	l2	sag	0.96609
+lemmatization	0.01	l2	saga	0.96384
