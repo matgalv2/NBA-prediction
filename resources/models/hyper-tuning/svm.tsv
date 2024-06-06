@@ -307,3 +307,17 @@ C	kernel	degree	probability	accuracy
 0.01	poly	18	False	0.50703
 0.01	poly	19	True	0.52077
 0.01	poly	19	False	0.52077
+1000	poly	20	True	0.52294
+1000	poly	20	False	0.52294
+100	poly	20	True	0.51374
+100	poly	20	False	0.51374
+50	poly	20	True	0.51607
+50	poly	20	False	0.51607
+10	poly	20	True	0.52077
+10	poly	20	False	0.52077
+1.0	poly	20	True	0.51163
+1.0	poly	20	False	0.51163
+0.1	poly	20	True	0.50703
+0.1	poly	20	False	0.50703
+0.01	poly	20	True	0.50936
+0.01	poly	20	False	0.50936
